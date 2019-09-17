@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".AddBookActivity">
+
+
+    <EditText
+        android:layout_gravity="center"
+        android:id="@+id/adnameofnews"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="@string/adnewsname" />
+
+    <EditText
+        android:layout_gravity="center"
+        android:id="@+id/adnameofuser"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="@string/adusername" />
+
+    <EditText
+        android:layout_gravity="center"
+        android:id="@+id/aname"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="@string/adname" />
+
+    <EditText
+        android:id="@+id/adnumofbook"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ems="10"
+        android:inputType="number"
+        android:hint="@string/booknum" />
+
+    <Button
+        android:id="@+id/adbookadmin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/addbook"/>
+</LinearLayout>

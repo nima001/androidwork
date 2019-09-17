@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.newspapersubsystem">
+
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".AdUserActivity"></activity>
+        <activity android:name=".AMUserActivity" />
+        <activity
+            android:name=".UserDetailActivity"
+            android:label="@string/title_activity_user_detail"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".UserActivity" />
+        <activity android:name=".AdupbookActivity" />
+        <activity android:name=".UpNewsActicity" />
+        <activity android:name=".AddnewsActivity" />
+        <activity android:name=".ModifyActivity" />
+        <activity
+            android:name=".BookByuserActivity"
+            android:label="@string/title_activity_book_byuser"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".AddBookActivity" />
+
+        <receiver
+            android:name=".CodenumReceiver"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".RegisterActivity"
+            android:label="@string/title_activity_register" />
+        <activity
+            android:name=".ScrollingActivity"
+            android:label="@string/title_activity_scrolling"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity android:name=".IndexActivity" />
+        <activity android:name=".LunchActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity" />
+    </application>
+
+</manifest>

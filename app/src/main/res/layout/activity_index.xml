@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="top"
+    android:orientation="vertical"
+    tools:context=".IndexActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="38dp"
+        android:orientation="horizontal"
+        tools:ignore="MissingConstraints">
+
+
+        <EditText
+            android:id="@+id/et_search"
+            android:layout_width="287dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_toLeftOf="@id/btn_serarch"
+            android:background="@drawable/shape1"
+            android:hint="输入报刊号或报刊名"
+            android:paddingLeft="10dp" />
+
+        <Button
+            android:id="@+id/btn_serarch"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:hint="搜索" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="38dp"
+        android:orientation="horizontal"
+        tools:ignore="MissingConstraints">
+
+
+        <EditText
+            android:id="@+id/et_search1"
+            android:layout_width="287dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_toLeftOf="@id/btn_serarch"
+            android:background="@drawable/shape1"
+            android:hint="请输入订单号"
+            android:paddingLeft="10dp" />
+
+        <Button
+            android:id="@+id/btn_serarch1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:hint="搜索" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/u"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints"
+        android:orientation="vertical">
+        <android.support.v7.widget.CardView
+            app:cardElevation="5dp"
+            app:cardCornerRadius="10dp"
+            android:layout_width="match_parent"
+            app:cardUseCompatPadding="true"
+            android:layout_marginTop="2dp"
+            android:layout_gravity="center"
+            android:layout_height="80dp">
+            <TextView
+                android:id="@+id/uUsername"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            app:cardElevation="5dp"
+            app:cardCornerRadius="10dp"
+            android:layout_gravity="center"
+            app:cardUseCompatPadding="true"
+            android:layout_marginTop="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="250dp">
+            <TextView
+                android:id="@+id/uType"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:layout_marginTop="3dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+            <TextView
+                android:id="@+id/uname"
+                android:gravity="center"
+                android:textSize="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+            <TextView
+                android:id="@+id/uIdcard"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:layout_marginTop="60dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+            <TextView
+                android:id="@+id/uPhone"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:layout_marginTop="110dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+            <TextView
+                android:id="@+id/uAdress"
+                android:gravity="center"
+                android:textSize="20dp"
+                android:layout_marginTop="130dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+        </android.support.v7.widget.CardView>
+
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <Button
+                android:id="@+id/moads"
+                android:layout_gravity="center"
+                android:background="@color/white"
+                android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/modify"/>
+        </android.support.v7.widget.CardView>
+
+
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <Button
+                android:id="@+id/usermanage"
+                android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+                android:layout_gravity="center"
+                android:background="@color/white"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:text="@string/usermanage"/>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <Button
+                android:id="@+id/out"
+                android:layout_gravity="center"
+                android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+                android:background="@color/white"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="@string/out"/>
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycle_view"
+        android:orientation="vertical"
+        android:longClickable="true"
+        android:layout_marginTop="36dp"
+        android:layout_marginBottom="55dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="47dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycle_view1"
+        android:orientation="vertical"
+        android:layout_marginTop="36dp"
+        android:layout_marginBottom="55dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="47dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/addbo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:clickable="true"
+        app:backgroundTint="@color/white"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/navigation"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:srcCompat="@drawable/ic_add_circle_black_24dp"
+        app:useCompatPadding="true"
+        tools:ignore="MissingConstraints"
+        />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/addbo1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:clickable="true"
+        app:backgroundTint="@color/white"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/navigation"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:srcCompat="@drawable/ic_add_circle_black_24dp"
+        app:useCompatPadding="true"
+        tools:ignore="MissingConstraints"
+        />
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:background="?android:attr/windowBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:menu="@menu/navigation" />
+</android.support.constraint.ConstraintLayout>
